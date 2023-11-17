@@ -32,6 +32,8 @@ spec:
               mountPath: "/mnt/secrets-store"
               readOnly: true
           resources: {}
+          securityContext:
+            privileged: true
       serviceAccountName: default
       volumes:
         - name: secrets-store-inline
